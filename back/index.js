@@ -5,6 +5,12 @@ import { connectDB } from "./db.js";
 import authRoutes from "./routes/auth.js";
 import noteRoutes from "./routes/notes.js";
 
+app.use(
+  cors({
+    origin: "https://mern-test-l7zg.onrender.com",
+  })
+);
+
 dotenv.config();
 const app = express();
 

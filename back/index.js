@@ -5,16 +5,14 @@ import { connectDB } from "./db.js";
 import authRoutes from "./routes/auth.js";
 import noteRoutes from "./routes/notes.js";
 
+dotenv.config();
+const app = express();
+
 app.use(
   cors({
     origin: "https://mern-test-l7zg.onrender.com",
   })
 );
-
-dotenv.config();
-const app = express();
-
-app.use(cors({ origin: process.env.CLIENT_URL }));
 app.use(express.json());
 
 app.get("/api/health", (req, res) => res.json({ ok: true }));

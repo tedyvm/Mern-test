@@ -1,4 +1,6 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000/api";
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://mern-test-back-0gpi.onrender.com/api";
 
 export function getToken() {
   return localStorage.getItem("token");
